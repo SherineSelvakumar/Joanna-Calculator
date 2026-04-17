@@ -2,4 +2,4 @@ FROM python:3.9
 WORKDIR /app
 COPY . .
 RUN pip install -r requirements.txt
-CMD ["python", "Joanna calculator.py"]
+CMD ["streamlit", "run", "Joanna calculator.py", "--server.port=8501", "--server.address=0.0.0.0"]
